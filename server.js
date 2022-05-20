@@ -29,13 +29,6 @@ app.use(
 	})
 );
 
-const restrict = (req, res, next) => {
-	if (req.session.user) {
-		next();
-	} else {
-		res.status(401).send({ error: "Unauthorized" });
-	}
-};
 
 app.get("/api/loggedin", async (req, res) => {
 	if (req.session.user) {
