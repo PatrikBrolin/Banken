@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="main-page">
+				<form id="logout">
+					<button><p><</p></button>
+				</form>
+				<div class="user-info">
+					<h2 class="user"></h2>
+				</div>
+				<div class="account"></div>
+				<main class="main-content">
+					<div class="container-card">
+						<div class="card-container">
+							<div class="content"></div>
+						</div>
+						<button class="scroll-btn btn-left"><</button>
+						<button class="scroll-btn btn-right">></button>
+					</div>
+					<div class="button-div">
+						<button
+							class="display-account-form button-style"
+							onClick="addAccount()"
+						>
+							Lägg till konto
+						</button>
+						<button
+							class="delete-account button-style"
+							onClick="deleteAccount()"
+						>
+							Radera konto
+						</button>
+						<button
+							class="add-amount button-style"
+							onClick="addMoney()"
+						>
+							Insättning
+						</button>
+						<button
+							class="withdraw-amount button-style"
+							onClick="withdrawMoney()"
+						>
+							Uttag
+						</button>
+					</div>
+					<form id="add-account-form" class="form-style" action="">
+						<button type="button" class="close-btn"  onClick="closeWindow()"><</button>
+						<input
+							type="text"
+							name="account-name"
+							id="account-name"
+							placeholder="Kontonamn"
+							required
+						/>
+						<input
+							type="number"
+							name="amount"
+							id="amount"
+							placeholder="Summa"
+							required
+						/>
+						<button class="button-style style">Aktivera Konto</button>
+					</form>
+
+					<form id="delete-account-form" class="form-style" action="">
+						<button type="button" class="close-btn"  onClick="closeWindow()"><</button>
+						<select name="accountSelection" id="accountSelection">
+							<option value=""></option>
+						</select>
+						<button class="button-style style">Delete</button>
+					</form>
+
+					<form id="add-money-form" class="form-style" action="">
+						<button type="button" class="close-btn"  onClick="closeWindow()"><</button>
+						<select name="moneySelection" id="moneySelection">
+							<option value=""></option>
+						</select>
+						<input type="number" id="moneyInput" placeholder="Summa" required />
+						<button class="button-style style">Lägg till summa</button>
+					</form>
+
+					<form id="withdraw-money-form" class="form-style" action="">
+						<button type="button" class="close-btn" onClick="closeWindow()"><</button>
+						<select name="withdrawSelection" id="withdrawSelection">
+							<option value=""></option>
+						</select>
+						<input type="number" id="withdrawInput" placeholder="Summa" required />
+						<button class="button-style style">Ta ut summa</button>
+					</form>
+				</main>
+			</div>
+		</div>
+
+		<script src="mainPage.js"></script>
+	</body>
+</html>
