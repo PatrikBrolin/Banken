@@ -20,11 +20,11 @@ app.use(express.json());
 
 app.use(
 	session({
-		resave: false, // don't save session if unmodified
-		saveUninitialized: false, // don't create session until something stored
+		resave: false,
+		saveUninitialized: false,
 		secret: "shhhh, very secret",
 		cookie: {
-			maxAge: 5 * 60 * 1000, // 5 minutes
+			maxAge: 5 * 60 * 1000, 
 		},
 	})
 );
